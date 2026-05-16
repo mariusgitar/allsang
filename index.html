@@ -8,233 +8,169 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --red: #C0001E;
-    --navy: #00205B;
-    --gold: #C9A84C;
-    --cream: #FDF8EE;
-    --white: #FFFFFF;
-  }
-
-- { margin: 0; padding: 0; box-sizing: border-box; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-background-color: var(–navy);
-background-image:
-radial-gradient(ellipse at top, #1a3a7a 0%, #00205B 60%),
-repeating-linear-gradient(
-45deg,
-transparent,
-transparent 40px,
-rgba(201,168,76,0.03) 40px,
-rgba(201,168,76,0.03) 41px
-);
-min-height: 100vh;
+background: #F5F0E8;
 font-family: ‘Crimson Text’, Georgia, serif;
-color: var(–cream);
-padding: 0 0 60px;
+color: #1a1a2e;
+min-height: 100vh;
+padding-bottom: 60px;
 }
 
-/* Header banner */
 .header {
-background: var(–red);
-border-bottom: 5px solid var(–gold);
-padding: 18px 20px 14px;
+background: linear-gradient(160deg, #D4001F 0%, #9A0018 100%);
+padding: 20px 20px 18px;
 text-align: center;
+box-shadow: 0 4px 24px rgba(180,0,20,0.35);
 position: relative;
-overflow: hidden;
 }
-.header::before,
 .header::after {
-content: ‘✦’;
+content: ‘’;
 position: absolute;
-top: 50%;
-transform: translateY(-50%);
-font-size: 28px;
-color: rgba(255,255,255,0.25);
+bottom: 0; left: 0; right: 0;
+height: 5px;
+background: linear-gradient(90deg, #9A0018, #C9A84C, #C9A84C, #9A0018);
 }
-.header::before { left: 16px; }
-.header::after { right: 16px; }
-
 .kor-navn {
 font-family: ‘Playfair Display’, serif;
-font-size: clamp(20px, 6vw, 30px);
+font-size: clamp(22px, 6.5vw, 34px);
 font-weight: 900;
-color: var(–white);
-letter-spacing: 0.04em;
+color: #FFFFFF;
+letter-spacing: 0.06em;
 text-transform: uppercase;
 line-height: 1.1;
+text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 .kor-undertittel {
 font-family: ‘Crimson Text’, serif;
-font-size: clamp(11px, 3.5vw, 15px);
-color: rgba(255,255,255,0.75);
-letter-spacing: 0.15em;
+font-size: clamp(12px, 3.5vw, 15px);
+color: rgba(255,255,255,0.85);
+letter-spacing: 0.18em;
 text-transform: uppercase;
-margin-top: 3px;
+margin-top: 5px;
 }
 
-/* Whale icon */
-.whale-icon {
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 28px 20px 10px;
-}
-.whale-svg {
-width: 64px;
-height: 64px;
-filter: drop-shadow(0 2px 12px rgba(201,168,76,0.4));
-}
-
-/* Title section */
-.song-title-block {
+.hero {
+background: #00205B;
+padding: 28px 20px 24px;
 text-align: center;
-padding: 0 20px 24px;
+}
+.whale-wrap { margin-bottom: 14px; }
+.whale-svg {
+width: 72px; height: 72px;
+filter: drop-shadow(0 3px 14px rgba(201,168,76,0.5));
 }
 .song-title {
 font-family: ‘Playfair Display’, serif;
-font-size: clamp(26px, 8vw, 46px);
+font-size: clamp(28px, 9vw, 50px);
 font-weight: 700;
 font-style: italic;
-color: var(–gold);
+color: #C9A84C;
 line-height: 1.15;
-text-shadow: 0 2px 20px rgba(201,168,76,0.3);
+text-shadow: 0 2px 16px rgba(0,0,0,0.4);
 }
 .song-meta {
-font-size: clamp(12px, 3.5vw, 15px);
-color: rgba(253,248,238,0.55);
-letter-spacing: 0.12em;
+font-size: clamp(11px, 3.2vw, 14px);
+color: rgba(201,168,76,0.65);
+letter-spacing: 0.14em;
 margin-top: 8px;
 text-transform: uppercase;
 }
 
-/* Gold divider */
+.badge-wrap {
+background: #00205B;
+padding: 0 20px 22px;
+text-align: center;
+}
+.mai-badge {
+display: inline-block;
+background: #D4001F;
+color: #fff;
+font-family: ‘Playfair Display’, serif;
+font-weight: 700;
+font-size: clamp(14px, 4vw, 18px);
+padding: 8px 22px;
+border-radius: 40px;
+border: 2px solid rgba(201,168,76,0.5);
+box-shadow: 0 4px 16px rgba(180,0,20,0.4);
+letter-spacing: 0.04em;
+}
+
 .divider {
 display: flex;
 align-items: center;
 gap: 12px;
-padding: 0 24px 28px;
-max-width: 480px;
+padding: 24px 28px 20px;
+max-width: 500px;
 margin: 0 auto;
 }
 .divider-line {
-flex: 1;
-height: 1px;
-background: linear-gradient(90deg, transparent, var(–gold), transparent);
+flex: 1; height: 1.5px;
+background: linear-gradient(90deg, transparent, #C9A84C 40%, #C9A84C 60%, transparent);
 }
-.divider-star { color: var(–gold); font-size: 18px; }
+.divider-star { color: #C9A84C; font-size: 20px; }
 
-/* Verse cards */
 .verses {
 display: flex;
 flex-direction: column;
-gap: 20px;
-padding: 0 20px;
+gap: 18px;
+padding: 0 18px;
 max-width: 520px;
 margin: 0 auto;
 }
 
 .verse-card {
-background: rgba(255,255,255,0.05);
-border: 1px solid rgba(201,168,76,0.25);
-border-radius: 4px;
-padding: 22px 24px;
-position: relative;
-backdrop-filter: blur(4px);
-animation: fadeUp 0.6s ease both;
+background: #FFFFFF;
+border-radius: 6px;
+border-top: 4px solid #D4001F;
+padding: 20px 22px 22px;
+box-shadow: 0 2px 16px rgba(0,32,91,0.12), 0 1px 4px rgba(0,0,0,0.06);
+animation: fadeUp 0.5s ease both;
 }
-.verse-card:nth-child(1) { animation-delay: 0.1s; }
-.verse-card:nth-child(2) { animation-delay: 0.25s; }
-.verse-card:nth-child(3) { animation-delay: 0.4s; }
+.verse-card:nth-child(2) { animation-delay: 0.15s; }
+.verse-card:nth-child(3) { animation-delay: 0.3s; }
 
 @keyframes fadeUp {
-from { opacity: 0; transform: translateY(16px); }
+from { opacity: 0; transform: translateY(14px); }
 to { opacity: 1; transform: translateY(0); }
 }
 
-.verse-number {
-position: absolute;
-top: -1px;
-left: 20px;
-background: var(–red);
-color: var(–white);
+.verse-label {
+display: inline-block;
+background: #00205B;
+color: #C9A84C;
 font-family: ‘Playfair Display’, serif;
 font-size: 11px;
 font-weight: 700;
-letter-spacing: 0.15em;
+letter-spacing: 0.2em;
 text-transform: uppercase;
 padding: 3px 10px;
-border-radius: 0 0 4px 4px;
+border-radius: 3px;
+margin-bottom: 14px;
 }
 
 .verse-text {
-font-size: clamp(18px, 5.5vw, 24px);
-line-height: 1.75;
-color: var(–cream);
-padding-top: 12px;
+font-size: clamp(19px, 5.5vw, 25px);
+line-height: 1.8;
+color: #111827;
 }
+.stanza { display: block; margin-bottom: 14px; }
+.stanza:last-child { margin-bottom: 0; }
 
-.verse-text .line {
-display: block;
-}
-
-.verse-text .line-pair {
-display: block;
-margin-bottom: 4px;
-}
-
-/* Red accent line on left for first verse */
-.verse-card.highlight {
-border-left: 3px solid var(–red);
-}
-
-/* Flag decoration */
 .flag-row {
 display: flex;
 justify-content: center;
-gap: 10px;
-padding: 32px 20px 12px;
-font-size: 28px;
-animation: fadeUp 0.6s 0.5s both;
+gap: 12px;
+padding: 28px 20px 10px;
+font-size: 30px;
 }
-
-/* Footer */
-.footer {
-text-align: center;
-padding: 8px 20px 0;
-animation: fadeUp 0.6s 0.6s both;
-}
+.footer { text-align: center; padding: 4px 20px; }
 .footer-text {
-font-size: clamp(11px, 3vw, 13px);
-color: rgba(253,248,238,0.35);
+font-size: 12px;
+color: #9ca3af;
 letter-spacing: 0.1em;
 text-transform: uppercase;
-}
-.footer-text a {
-color: rgba(201,168,76,0.6);
-text-decoration: none;
-}
-
-/* 17. mai badge */
-.mai-badge {
-display: inline-block;
-background: var(–red);
-color: var(–white);
-font-family: ‘Playfair Display’, serif;
-font-weight: 900;
-font-size: clamp(13px, 4vw, 18px);
-padding: 6px 18px;
-border-radius: 30px;
-letter-spacing: 0.05em;
-margin: 0 auto 20px;
-border: 2px solid rgba(255,255,255,0.2);
-box-shadow: 0 4px 20px rgba(192,0,30,0.4);
-animation: fadeUp 0.5s 0.05s both;
-}
-.badge-wrap {
-text-align: center;
-padding: 0 20px 0;
 }
 </style>
 
@@ -246,29 +182,21 @@ padding: 0 20px 0;
   <div class="kor-undertittel">Synger for deg – 17. mai 2026</div>
 </div>
 
-<div class="whale-icon">
-  <svg class="whale-svg" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <!-- Whale body -->
-    <ellipse cx="48" cy="42" rx="36" ry="22" fill="#C9A84C" opacity="0.9"/>
-    <!-- Tail -->
-    <path d="M82 42 Q96 28 98 20 Q90 32 84 38 Q96 30 100 22 Q94 36 84 44Z" fill="#C9A84C" opacity="0.9"/>
-    <!-- Belly -->
-    <ellipse cx="42" cy="50" rx="22" ry="10" fill="#FDF8EE" opacity="0.3"/>
-    <!-- Fin -->
-    <path d="M55 28 Q62 14 70 18 Q64 24 58 30Z" fill="#C9A84C" opacity="0.7"/>
-    <!-- Eye -->
-    <circle cx="26" cy="38" r="4" fill="#00205B"/>
-    <circle cx="25" cy="37" r="1.5" fill="white"/>
-    <!-- Mouth / smile -->
-    <path d="M16 44 Q22 52 30 48" stroke="#00205B" stroke-width="2" stroke-linecap="round" fill="none"/>
-    <!-- Water spout -->
-    <path d="M28 22 Q24 10 28 2 Q30 10 34 18" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
-    <path d="M24 16 Q18 6 22 0" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
-    <path d="M32 14 Q36 4 32 0" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
-  </svg>
-</div>
-
-<div class="song-title-block">
+<div class="hero">
+  <div class="whale-wrap">
+    <svg class="whale-svg" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="48" cy="44" rx="36" ry="22" fill="#C9A84C"/>
+      <path d="M82 44 Q96 30 98 20 Q90 34 84 40 Q96 30 100 20 Q94 38 84 46Z" fill="#C9A84C"/>
+      <ellipse cx="42" cy="52" rx="22" ry="9" fill="#FDF8EE" opacity="0.35"/>
+      <path d="M55 30 Q62 14 70 18 Q64 24 58 32Z" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="26" cy="40" r="4.5" fill="#00205B"/>
+      <circle cx="25" cy="39" r="1.8" fill="white"/>
+      <path d="M16 46 Q22 54 30 50" stroke="#00205B" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <path d="M28 24 Q24 12 28 2 Q31 12 34 20" stroke="#FDF8EE" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+      <path d="M23 17 Q17 6 21 0" stroke="#FDF8EE" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.45"/>
+      <path d="M33 15 Q37 4 33 0" stroke="#FDF8EE" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.45"/>
+    </svg>
+  </div>
   <div class="song-title">Kom mai,<br>du skjønne milde</div>
   <div class="song-meta">Tekst: D. Jäger &nbsp;·&nbsp; Melodi: W. A. Mozart</div>
 </div>
@@ -285,57 +213,35 @@ padding: 0 20px 0;
 
 <div class="verses">
 
-  <div class="verse-card highlight">
-    <div class="verse-number">1. vers</div>
+  <div class="verse-card">
+    <div class="verse-label">1. vers</div>
     <div class="verse-text">
-      <span class="line">Kom mai, du skjønne milde,</span>
-      <span class="line">gjør skogen atter grønn,</span>
-      <span class="line">og la ved bekk og kilde</span>
-      <span class="line">fiolen blomstre skjønn!</span>
-      <br>
-      <span class="line">Hvor ville jeg dog gjerne</span>
-      <span class="line">at jeg igjen deg så!</span>
-      <span class="line">Akk, kjære mai, hvor gjerne</span>
-      <span class="line">gad jeg i marken gå!</span>
+      <span class="stanza">Kom mai, du skjønne milde,<br>gjør skogen atter grønn,<br>og la ved bekk og kilde<br>fiolen blomstre skjønn!</span>
+      <span class="stanza">Hvor ville jeg dog gjerne<br>at jeg igjen deg så!<br>Akk, kjære mai, hvor gjerne<br>gad jeg i marken gå!</span>
     </div>
   </div>
 
   <div class="verse-card">
-    <div class="verse-number">2. vers</div>
+    <div class="verse-label">2. vers</div>
     <div class="verse-text">
-      <span class="line">Om vint'ren kan man have</span>
-      <span class="line">vel mangt et tidsfordriv;</span>
-      <span class="line">man kan i sneen trave –</span>
-      <span class="line">å ja, et lystig liv!</span>
-      <br>
-      <span class="line">Men når seg lerken svinger</span>
-      <span class="line">mot sky med liflig slag,</span>
-      <span class="line">på engen om å springe –</span>
-      <span class="line">det er en annen sak!</span>
+      <span class="stanza">Om vint'ren kan man have<br>vel mangt et tidsfordriv;<br>man kan i sneen trave –<br>å ja, et lystig liv!</span>
+      <span class="stanza">Men når seg lerken svinger<br>mot sky med liflig slag,<br>på engen om å springe –<br>det er en annen sak!</span>
     </div>
   </div>
 
   <div class="verse-card">
-    <div class="verse-number">3. vers</div>
+    <div class="verse-label">3. vers</div>
     <div class="verse-text">
-      <span class="line">Kom derfor, mai, du milde,</span>
-      <span class="line">gjør skogen atter grønn,</span>
-      <span class="line">og la ved bekk og kilde</span>
-      <span class="line">fiolen blomstre skjønn!</span>
-      <br>
-      <span class="line">Hvor ville jeg dog gjerne</span>
-      <span class="line">at jeg igjen deg så!</span>
-      <span class="line">Akk, kjære mai, hvor gjerne</span>
-      <span class="line">gad jeg i marken gå!</span>
+      <span class="stanza">Kom derfor, mai, du milde,<br>gjør skogen atter grønn,<br>og la ved bekk og kilde<br>fiolen blomstre skjønn!</span>
+      <span class="stanza">Hvor ville jeg dog gjerne<br>at jeg igjen deg så!<br>Akk, kjære mai, hvor gjerne<br>gad jeg i marken gå!</span>
     </div>
   </div>
 
 </div>
 
 <div class="flag-row">🇳🇴 🐋 🇳🇴</div>
-
 <div class="footer">
-  <p class="footer-text">Hvalkjæften Mannskor &nbsp;·&nbsp; 17. mai 2026</p>
+  <p class="footer-text">Hvalkjæften Mannskor · 17. mai 2026</p>
 </div>
 
 </body>
